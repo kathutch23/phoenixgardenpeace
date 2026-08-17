@@ -426,9 +426,10 @@
           radial-gradient(circle at 50% 34%,rgba(131,154,101,.58) 0 1.7%,transparent 2.1%),
           linear-gradient(90deg,rgba(13,38,29,.94) 0%,rgba(18,48,35,.37) 46%,rgba(52,39,22,.62) 100%),
           url('kat-mid.jpeg') 50% 52%/cover no-repeat;
-        background-position: 50%;
+        background-position: 50% 50%;
         background-attachment: fixed;
         background-size: cover;
+        background-repeat: no-repeat;
       }
       .photo-ribbon:before{
         content:"";
@@ -662,6 +663,17 @@
         }
         .cta{
           transition:none
+        }
+      }
+      /* iOS Safari does not reliably combine fixed backgrounds with cover.
+         Let the ribbon image scroll with its section there to prevent the
+         enlarged, tiled-looking repaint during scroll. */
+      @supports (-webkit-touch-callout: none){
+        @media (hover: none) and (pointer: coarse){
+          .photo-ribbon{
+            background-attachment: scroll;
+            background-position: 50% 50%;
+          }
         }
       }
     </style>
