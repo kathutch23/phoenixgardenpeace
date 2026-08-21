@@ -620,41 +620,9 @@
         line-height:2;
         text-align:right
       }
-      @media(max-width:1.900px){
-        section,.closing{
-          padding:76px 7vw
-        }
-        .intro,.location-grid{
-          grid-template-columns:1fr;
-          gap:45px
-        }
-        .features,.inline-3{
-          grid-template-columns:1fr
-        }
-        .offering-list{
-          grid-template-columns:1fr
-        }
-        .hero-content{
-          padding:0 7vw 7svh
-        }
-        .hero-art{
-          background-image:
-            radial-gradient(ellipse at 68% 22%,rgba(232,173,76,.18),transparent 31%),
-            radial-gradient(ellipse at 14% 21%,rgba(146,187,161,.13),transparent 28%),
-            linear-gradient(90deg,rgba(13,27,20,.88) 0%,rgba(16,39,28,.55) 52%,rgba(13,24,19,.08) 100%),
-            url('kat-hero.jpeg'),
-            linear-gradient(135deg,#344b36 0%,#173129 42%,#19231d 100%);
-          background-position:center,center,center,53% 48%,center
-        }
-        .closing{
-          background-position:center,center,70% 50%,center
-        }
-        footer{
-          flex-direction:column;
-          text-align:center
-        }
-        .legal{
-          text-align:center
+      @media (orientation: landscape) {
+        .hero-art {
+          background-image: url('kat-hero-landscape.png');
         }
       }
       @media(prefers-reduced-motion:reduce){
