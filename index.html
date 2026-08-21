@@ -11,7 +11,16 @@
   </head>
   <body>
     <a class="skip" href="#welcome">Skip to content</a>
-    <header class="hero">
+    <header class="hero" id="top">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-name" href="#top">Katherine Hutcheson</a>
+        <div class="nav-links">
+          <a href="#about">About Me</a>
+          <a href="#offerings">Work with Katherine</a>
+          <a href="#program">The Program</a>
+          <a href="#nourishment">Nourishment</a>
+        </div>
+      </nav>
       <div
         class="hero-art"
         role="img"
@@ -36,6 +45,58 @@
       </div>
     </header>
     <main id="welcome">
+      <section class="about" id="about">
+        <div class="about-heading">
+          <p class="section-label">Meet Katherine</p>
+          <h2 class="section-title">A return to<br /><em>the body.</em></h2>
+          <p class="about-pullquote">
+            “The earth was holding me for what seemed like the first time.”
+          </p>
+          <img
+            class="about-photo"
+            src="kat-profile.jpeg"
+            alt="Katherine outdoors in a natural setting"
+          />
+        </div>
+        <div class="about-story copy">
+          <p>
+            My path to Ayurveda began with a diagnosis. A week before the world
+            shut down in 2020, I learned I had PCOS. At the time I was a
+            high-achieving student and rower, running on discipline and
+            people-pleasing, my nervous system humming in fight-or-flight since
+            a chaotic childhood. But underneath it all was a kid who used to
+            climb trees and lose hours in the park across the street, someone
+            who knew, once, how to simply be in her body.
+          </p>
+          <p>
+            I spent years working as an EMT, and found a front-row seat to how
+            disconnected modern medicine is from the root causes of disease.
+            Burnt out and heartbroken by what I'd seen, I left that work for a
+            degree in developmental psychology, and food became my medicine. I
+            completed my 200-hour yoga teacher training and moved to a village
+            in Sri Lanka with no electricity, where Ayurveda and yoga weren't a
+            wellness trend but simply how people lived. I learned my
+            <em>prakruti</em> and <em>vikruti</em>, my constitution and my
+            imbalance, and felt the earth holding me for what seemed like the
+            first time.
+          </p>
+          <p>
+            The years since have been an apprenticeship: children's yoga
+            certification, research on yoga and preschoolers, a month of silence
+            in the Amazon, a deep dive into gut health. I completed a year-long
+            program at the Sarasvati School of Ayurveda and Yoga Therapy under
+            Susan Bass, earning my certification as an Ayurvedic Wellness
+            Advisor alongside my 500-hour yoga certification.
+          </p>
+          <div class="credentials" aria-label="Credentials">
+            <span>Certified Ayurvedic Wellness Advisor</span>
+            <span>500-Hour Registered Yoga Teacher</span>
+            <span>Certified Children's Yoga Teacher</span>
+            <span>B.A., Developmental Psychology</span>
+            <span>Former Emergency Medical Technician</span>
+          </div>
+        </div>
+      </section>
       <!-- section>
         <div class="intro">
           <div class="copy">
@@ -56,15 +117,15 @@
           </div>
         </div>
       </section -->
+      <div class="photo-ribbon" style="background-image: url('Kat-Dancer.png');"></div>
       
       <section id="offerings">
         <p class="section-label">Ways to work together</p>
         <h2 class="section-title">
           Small practices.<br /><em>Lasting shifts.</em>
         </h2>
-        <div class="">
+        <div class="features">
           <article class="feature">
-            <div class="feature-icon">☼</div>
             <h3>Ayurvedic Advising</h3>
             <p>
               Personalized support for daily routines, nutrition, and
@@ -73,7 +134,6 @@
             </p>
           </article>
           <article class="feature">
-            <div class="feature-icon">⌇</div>
             <h3>Private Yoga</h3>
             <p>
               One-to-one yoga, in person or via Zoom, tailored to your body and
@@ -81,7 +141,6 @@
             </p>
           </article>
           <article class="feature">
-            <div class="feature-icon">✦</div>
             <h3>Cooking Classes</h3>
             <p>
               A hands-on introduction to mindful, nourishing Ayurvedic cooking:
@@ -99,7 +158,7 @@
         }</style>
       </div>
 
-      <section class="dark">
+      <section class="dark" id="program">
         <p class="section-label">Personalized Ayurvedic wellness advising</p>
         <h2 class="section-title">
           A rhythm that<br /><em>belongs to you.</em>
@@ -116,22 +175,22 @@
               five sessions and receive the sixth as a gift.
             </p>
           </div>
-          <div class="">
-            <div class="inline-item">
+          <div class="features program-features">
+            <div class="feature inline-item">
               <h3>Daily routine</h3>
               <p>
                 Simple rituals for mornings and evenings that support steadiness
                 and rest.
               </p>
             </div>
-            <div class="inline-item">
+            <div class="feature inline-item">
               <h3>Nourishment</h3>
               <p>
                 Food guidance that meets your constitution, season, schedule,
                 and appetite.
               </p>
             </div>
-            <div class="inline-item">
+            <div class="feature inline-item">
               <h3>Rejuvenation</h3>
               <p>
                 Attentive practices that build connection to your energy and
@@ -142,9 +201,9 @@
         </div>
       </section>
 
-      <div class="photo-ribbon" style="background-image: url('kat-footer.jpeg');"></div>
+      <div class="photo-ribbon" style="background-image: url('Kat-Prayer.png'); background-position: 10% 50%;"></div>
       
-      <section class="dark">
+      <section class="dark" id="nourishment">
         <div class="location">
           <div>
             <p class="section-label">The cooking class</p>
@@ -164,7 +223,6 @@
             <div class="loc">
               <span>Make together</span><b>3 nourishing dishes</b>
             </div>
-            <div class="loc"><span>Sliding scale</span><b>$180–$360</b></div>
           </div>
         </div>
       </section>
@@ -252,6 +310,62 @@
         padding:1rem;
         background:var(--gold);
         color:var(--earth)
+      }
+      .site-nav{
+        position:absolute;
+        z-index:2;
+        inset:0 0 auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:2rem;
+        padding:22px 8vw;
+        color:var(--cream);
+        background:linear-gradient(to bottom,rgba(17,25,20,.64),rgba(17,25,20,.28));
+        border-bottom:1px solid rgba(244,237,226,.1);
+        backdrop-filter:blur(7px);
+        -webkit-backdrop-filter:blur(7px)
+      }
+      .site-name{
+        flex:0 0 auto;
+        font:italic 400 clamp(1.15rem,1.8vw,1.55rem)/1 Georgia,'Times New Roman',serif;
+        letter-spacing:.015em;
+        text-decoration:none;
+        text-shadow:0 2px 14px rgba(0,0,0,.55)
+      }
+      .nav-links{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:clamp(1rem,2.4vw,2.5rem)
+      }
+      .nav-links a{
+        position:relative;
+        padding:8px 0;
+        font-size:10px;
+        font-weight:700;
+        line-height:1.25;
+        letter-spacing:.2em;
+        text-transform:uppercase;
+        text-decoration:none;
+        text-shadow:0 2px 12px rgba(0,0,0,.75)
+      }
+      .nav-links a:after{
+        content:"";
+        position:absolute;
+        right:0;
+        bottom:0;
+        left:0;
+        height:1px;
+        background:var(--gold);
+        transform:scaleX(0);
+        transform-origin:right;
+        transition:transform .2s ease
+      }
+      .nav-links a:hover:after,
+      .nav-links a:focus-visible:after{
+        transform:scaleX(1);
+        transform-origin:left
       }
        .hero{
         position:relative;
@@ -360,6 +474,64 @@
        section{
         padding:100px 8vw
       }
+      .about{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));
+        gap:clamp(2.5rem,7vw,7rem);
+        align-items:start;
+        background:
+          radial-gradient(circle at 8% 15%,rgba(231,173,76,.1),transparent 25rem),
+          var(--mid)
+      }
+      .about-heading:before{
+        content:"";
+        display:block;
+        width:3.5rem;
+        height:1px;
+        margin-bottom:2rem;
+        background:var(--gold)
+      }
+      .about-pullquote{
+        max-width:23rem;
+        padding-left:1.25rem;
+        border-left:1px solid var(--gold-dim);
+        color:var(--mist);
+        font:italic 400 clamp(1.05rem,2vw,1.35rem)/1.55 Georgia,'Times New Roman',serif
+      }
+      .about-photo{
+        display:block;
+        width:100%;
+        max-height:32rem;
+        margin-top:2rem;
+        object-fit:cover;
+        object-position:center 35%
+      }
+      .about-story{
+        max-width:48rem
+      }
+      .about-story em{
+        color:var(--mist);
+        font-family:Georgia,'Times New Roman',serif
+      }
+      .credentials{
+        display:flex;
+        flex-wrap:wrap;
+        gap:.65rem;
+        margin-top:2.25rem
+      }
+      .credentials span{
+        display:inline-flex;
+        align-items:center;
+        min-height:38px;
+        padding:9px 14px;
+        border:1px solid rgba(231,173,76,.55);
+        color:#f1be69;
+        font-size:9px;
+        font-weight:700;
+        line-height:1.35;
+        letter-spacing:.14em;
+        text-transform:uppercase
+      }
       .section-label{
         color:var(--gold);
         margin-bottom:1.25rem
@@ -444,15 +616,18 @@
         background:linear-gradient(to bottom,rgba(13,30,23,.44),transparent 10%,rgba(13,27,21,.4));
         pointer-events:none
       }
-       .features{
+      .features{
         display:grid;
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
         gap:2px;
         background:rgba(255,255,255,.04)
       }
       .feature{
         background:var(--charcoal);
         padding:36px 28px
+      }
+      .program-features .feature{
+        background:var(--mid)
       }
       .feature-icon{
         font-size:22px;
@@ -465,7 +640,7 @@
       }
       .feature p,.inline-item p{
         font-size:13px;
-        line-height:1.85;
+        line-height: 3em;
         color:rgba(244,237,226,.72);
         font-weight:400
       }
@@ -480,7 +655,6 @@
       }
       .inline-item h3{
         font:400 1.45rem Georgia,serif;
-        margin-bottom:10px
       }
       .offering-list{
         display:grid;
@@ -538,7 +712,7 @@
           radial-gradient(circle at 76% 43%,rgba(231,173,76,.16),transparent 26%),
           linear-gradient(90deg,rgba(13,36,28,.97) 0%,rgba(15,42,31,.88) 42%,rgba(19,29,24,.62) 100%),
           url('kat-foo-ter.jpeg') 82% 48%/cover no-repeat;
-        back-ground: url('kat-footer.jpeg') 82% 48%/cover no-repeat;
+        back-ground: url('Kat-Prayer.png') 82% 48%/cover no-repeat;
         padding:100px 8vw;
         text-align:center
       }
@@ -629,6 +803,37 @@
       @media (orientation: landscape) {
         .hero-art {
           background-image: url('kat-hero-landscape.png');
+          background-position:74% top;
+        }
+      }
+      @media (orientation: portrait) {
+        .site-nav{
+          display:block;
+          padding:22px 8vw;
+          background:transparent;
+          border-bottom:0;
+          backdrop-filter:none;
+          -webkit-backdrop-filter:none
+        }
+        .nav-links{
+          display:none
+        }
+      }
+      @media (max-width: 760px) {
+        .site-nav{
+          align-items:flex-start;
+          flex-direction:column;
+          gap:1rem;
+          padding-top:18px
+        }
+        .nav-links{
+          justify-content:flex-start;
+          flex-wrap:wrap;
+          gap:.45rem 1.2rem
+        }
+        .nav-links a{
+          font-size:9px;
+          letter-spacing:.14em
         }
       }
       @media(prefers-reduced-motion:reduce){
@@ -636,6 +841,9 @@
           scroll-behavior:auto
         }
         .cta{
+          transition:none
+        }
+        .nav-links a:after{
           transition:none
         }
       }
